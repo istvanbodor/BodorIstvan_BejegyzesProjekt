@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -40,6 +37,24 @@ public class Main {
         legnepszerubb();
         vanetobb(35);
         hanyolyan(15);
+        System.out.println("\n--------------------------------------------------------\n");
+        rendezes();
+        kiir();
+
+
+    }
+
+    private static void rendezes() {
+        int n = bejegyzesek.size();
+
+
+        for (int i = n - 1; i > 0; i--)
+            for (int j = 0; j < i; j++)
+                if (bejegyzesek.get(j).getLikeok() < bejegyzesek.get(j + 1).getLikeok()) {
+                    Bejegyzes tmp = bejegyzesek.get(j);
+                    bejegyzesek.set(j, bejegyzesek.get(j + 1));
+                    bejegyzesek.set((j + 1), tmp);
+                }
 
 
     }
