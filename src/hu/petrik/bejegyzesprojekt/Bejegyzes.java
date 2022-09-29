@@ -58,7 +58,7 @@ public class Bejegyzes {
                     "Szerkesztve:\n" +
                     "%s", this.szerzo, this.likeok, this.letrejott, this.tartalom);
         } else {
-            return return String.format("%s - %d - %s\n" +
+           return String.format("%s - %d - %s\n" +
                     "Szerkesztve: %s\n" +
                     "%s", this.szerzo, this.likeok, this.letrejott, this.szerkesztve, this.tartalom);
         }
