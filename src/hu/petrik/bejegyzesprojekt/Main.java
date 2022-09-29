@@ -37,14 +37,25 @@ public class Main {
         veletlenlicit();
         masodikbejegyzesszoveg();
         kiir();
-
+        legnepszerubb();
 
 
     }
 
+    private static void legnepszerubb() {
+        int like = bejegyzesek.get(0).getLikeok();
+        for (int i = 1; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() > like) {
+                like = bejegyzesek.get(i).getLikeok();
+            }
+        }
+        System.out.printf("%d likeot kapott a legtöbbet kedvelt bejegyzés.", like);
+    }
+
+
     private static void kiir() {
 
-        for (int i = 0; i <bejegyzesek.size() ; i++) {
+        for (int i = 0; i < bejegyzesek.size(); i++) {
             System.out.println(bejegyzesek.get(i));
         }
 
@@ -59,12 +70,11 @@ public class Main {
     }
 
     private static void veletlenlicit() {
-        for (int i = 0; i <(20*bejegyzesek.size()) ; i++) {
+        for (int i = 0; i < (20 * bejegyzesek.size()); i++) {
 
-            int festmenyIndex = (int)(Math.random()*bejegyzesek.size());
+            int festmenyIndex = (int) (Math.random() * bejegyzesek.size());
             bejegyzesek.get(festmenyIndex).like();
         }
-
 
 
     }
