@@ -34,7 +34,21 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Ismeretlen hiba");
         }
-        System.out.println(bejegyzesek);
+        veletlenlicit();
+        
+
+
+
+    }
+
+    private static void veletlenlicit() {
+        for (int i = 0; i <(20*bejegyzesek.size()) ; i++) {
+
+            int festmenyIndex = (int)(Math.random()*bejegyzesek.size());
+            bejegyzesek.get(festmenyIndex).like();
+        }
+
+
 
     }
 
