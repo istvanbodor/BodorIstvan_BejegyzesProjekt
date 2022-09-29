@@ -39,26 +39,36 @@ public class Main {
         kiir();
         legnepszerubb();
         vanetobb(35);
+        hanyolyan(15);
 
 
     }
 
+    private static void hanyolyan(int szam) {
+        int counter = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+
+            if (bejegyzesek.get(i).getLikeok() < szam) {
+                counter++;
+            }
+        }
+        System.out.println();
+        System.out.printf("%d %d-nél kevesebb likeot kapott bejegyzés van.", counter, szam);
+    }
+
     private static void vanetobb(int mennyiazannyi) {
         boolean vane = false;
-        for (int i = 0; i <bejegyzesek.size() ; i++) {
-            if (bejegyzesek.get(i).getLikeok()>mennyiazannyi)
-            {
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() > mennyiazannyi) {
                 vane = true;
             }
         }
-        if (vane)
-        {
+        if (vane) {
             System.out.println();
-            System.out.printf("Van olyan bejegyzés ami %d-nél töb likeot kapott.",mennyiazannyi);
-        }
-        else{
+            System.out.printf("Van olyan bejegyzés ami %d-nél töb likeot kapott.", mennyiazannyi);
+        } else {
             System.out.println();
-            System.out.printf("Nincs olyan bejegyzés ami %d-nél töb likeot kapott.",mennyiazannyi);
+            System.out.printf("Nincs olyan bejegyzés ami %d-nél töb likeot kapott.", mennyiazannyi);
         }
 
     }
