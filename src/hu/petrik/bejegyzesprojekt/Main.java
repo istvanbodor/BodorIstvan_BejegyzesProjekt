@@ -35,9 +35,26 @@ public class Main {
             System.out.println("Ismeretlen hiba");
         }
         veletlenlicit();
-        
+        masodikbejegyzesszoveg();
+        kiir();
 
 
+
+    }
+
+    private static void kiir() {
+
+        for (int i = 0; i <bejegyzesek.size() ; i++) {
+            System.out.println(bejegyzesek.get(i));
+        }
+
+    }
+
+    private static void masodikbejegyzesszoveg() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Adja meg a második bejegyszés tartalmát!");
+        String tart = sc.nextLine();
+        bejegyzesek.get(1).setTartalom(tart);
 
     }
 
