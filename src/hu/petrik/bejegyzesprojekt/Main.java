@@ -38,7 +38,28 @@ public class Main {
         masodikbejegyzesszoveg();
         kiir();
         legnepszerubb();
+        vanetobb(35);
 
+
+    }
+
+    private static void vanetobb(int mennyiazannyi) {
+        boolean vane = false;
+        for (int i = 0; i <bejegyzesek.size() ; i++) {
+            if (bejegyzesek.get(i).getLikeok()>mennyiazannyi)
+            {
+                vane = true;
+            }
+        }
+        if (vane)
+        {
+            System.out.println();
+            System.out.printf("Van olyan bejegyzés ami %d-nél töb likeot kapott.",mennyiazannyi);
+        }
+        else{
+            System.out.println();
+            System.out.printf("Nincs olyan bejegyzés ami %d-nél töb likeot kapott.",mennyiazannyi);
+        }
 
     }
 
