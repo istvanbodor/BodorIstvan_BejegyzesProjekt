@@ -31,7 +31,7 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Ismeretlen hiba");
         }
-        veletlenlicit();
+        veletlenlike();
         masodikbejegyzesszoveg();
         kiir();
         legnepszerubb();
@@ -115,7 +115,7 @@ public class Main {
 
     }
 
-    private static void veletlenlicit() {
+    private static void veletlenlike() {
         for (int i = 0; i < (20 * bejegyzesek.size()); i++) {
 
             int festmenyIndex = (int) (Math.random() * bejegyzesek.size());
